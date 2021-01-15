@@ -7,7 +7,12 @@ class V1::UsersController < ApplicationController
     if user&.status? && user.authenticate(permitted_params[:password])
       render json: { data: user.as_json, token: user.generate_token, status: 200 }, status: 200
     else
-      render json: { status: 401, error: "Invalid credentials" }, status: 401
+      if user.blank?
+        render json: { status: 401, error: "Sorry, You dont have account with us. Please signup" }, status: 401
+      else
+        render json: { status: 401, error: "Invalid credentials" }, status: 401
+      end
+
     end
   end
 
