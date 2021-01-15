@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
       end
     end
+    root to: "application#index"
   end
 
 end
