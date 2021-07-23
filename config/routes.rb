@@ -12,7 +12,7 @@ Rails.application.routes.draw do
         end
       end
 
-      resources :manufacturings, only: [:create]
+      resources :manufacturings, only: [:create, :index]
     end
     root to: "application#index"
   end
