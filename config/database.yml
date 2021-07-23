@@ -24,11 +24,7 @@ default: &default
 development:
   <<: *default
   database: evaluation_exercise_development
-  host: ec2-3-216-181-219.compute-1.amazonaws.com
-  database: dajvitdpn31hfv
-  username: saxkbbwvyhnwvs
-  port: 5432
-  password: 89dd15ecbc62afcb7fb310698975588a68c037bf937ae35572aacadde65e7926
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
