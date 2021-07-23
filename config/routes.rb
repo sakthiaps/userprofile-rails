@@ -10,8 +10,9 @@ Rails.application.routes.draw do
           post :login
           get :profile
         end
-
       end
+
+      resources :manufacturings, only: [:create]
     end
     root to: "application#index"
   end

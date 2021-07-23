@@ -1,0 +1,3 @@
+class ManufacturingEntry < ApplicationRecord
+
+end
