@@ -1,6 +1,6 @@
 class V1::ManufacturingsController < ApplicationController
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def create
     products = ManufacturingEntry.new(permitted_params)
